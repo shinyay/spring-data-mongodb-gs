@@ -4,5 +4,6 @@ import com.google.shinyay.entity.Customer
 import org.springframework.data.mongodb.repository.MongoRepository
 
 interface CustomerRepository : MongoRepository<Customer, String> {
-    fun findByFirstName(firstName: String)
+    fun findByFirstName(firstName: String): Customer
+    fun findByLastName(lastNamr: String): List<Customer>
 }
