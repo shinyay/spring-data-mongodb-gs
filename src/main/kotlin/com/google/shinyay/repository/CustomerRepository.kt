@@ -1,4 +1,7 @@
 package com.google.shinyay.repository
 
-class CustomerRepository {
+import com.google.shinyay.entity.Customer
+import org.springframework.data.mongodb.repository.MongoRepository
+
+interface CustomerRepository : MongoRepository<Customer, String> {
 }
