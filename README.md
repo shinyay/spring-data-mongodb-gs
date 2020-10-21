@@ -5,6 +5,10 @@ Overview
 ## Description
 
 ## Demo
+### Run MongoDB Container
+```shell script
+$ docker run --rm -d -p 27017:27017 --name mongodb mongo:4.4.1
+```
 
 ## Features
 
