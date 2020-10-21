@@ -1,13 +1,14 @@
 package com.google.shinyay
 
+import com.google.shinyay.repository.CustomerRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SpringDataMongodbGsApplication : CommandLineRunner {
+class SpringDataMongodbGsApplication(val repository: CustomerRepository) : CommandLineRunner {
 	override fun run(vararg args: String?) {
-		TODO("Not yet implemented")
+		repository.deleteAll()
 	}
 }
 
