@@ -10,6 +10,14 @@ Overview
 $ docker run --rm -d -p 27017:27017 --name mongodb mongo:4.4.1
 ```
 
+#### Mongo CLI
+
+```shell script
+$ docker exec -it mongodb /bin/bash
+```
+
+##### 
+
 ### Configuration for MongoDB to connect from Spring App
 ```yaml
 spring:
