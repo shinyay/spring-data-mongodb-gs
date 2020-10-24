@@ -35,7 +35,13 @@ test    0.000GB
 
 switched to db spring
 ```
-##### 
+##### Show Collections
+
+```shell script
+> show collections
+
+customer
+```
 
 ### Configuration for MongoDB to connect from Spring App
 ```yaml
