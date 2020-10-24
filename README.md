@@ -43,6 +43,12 @@ switched to db spring
 customer
 ```
 
+##### Show Collections' Status
+
+```shell script
+> db.collection.stats()
+```
+
 ### Configuration for MongoDB to connect from Spring App
 ```yaml
 spring:
