@@ -49,6 +49,14 @@ customer
 > db.collection.stats()
 ```
 
+##### Show Collections' contents
+
+- `db.collections.find()`
+
+```shell script
+> db.product.find( {QUERY} )
+```
+
 ### Configuration for MongoDB to connect from Spring App
 ```yaml
 spring:
