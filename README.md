@@ -28,8 +28,13 @@ spring  0.000GB
 test    0.000GB
 ```
 
+##### Use/Switch Database
 
+```shell script
+> use spring
 
+switched to db spring
+```
 ##### 
 
 ### Configuration for MongoDB to connect from Spring App
