@@ -12,21 +12,31 @@ import org.springframework.boot.runApplication
 @SpringBootApplication
 class SpringDataMongodbGsApplication(val repository: CustomerRepository) : CommandLineRunner {
 	override fun run(vararg args: String?) {
+		logger.info("[DELETE ALL]====================")
 		repository.deleteAll()
+		logger.info("================================")
 
+		logger.info("[SAVE CUSTOMER]=================")
 		repository.save(Customer(null,"Alice", "Smith"))
 		repository.save(Customer(null,"Bob", "Smith"))
-		repository.save(Customer(null,"Carol", "Baker"))
+		repository.save(Customer(null,"Carol", "Baker")))
+		logger.info("================================")
 
+		logger.info("[FIND CUSTOMERS]================")
 		for (customer in repository.findAll()) {
 			logger.info(customer.toString())
 		}
+		logger.info("================================")
 
+		logger.info("[FIND CUSTOMER BY FIRST-NAME]===")
 		logger.info(repository.findByFirstName("Alice").toString())
+		logger.info("================================")
 
+		logger.info("[FIND CUSTOMERS BY LAST-NAME]===")
 		for (customer in repository.findByLastName("Smith")) {
 			logger.info(customer.toString())
 		}
+		logger.info("================================")
 	}
 }
 
