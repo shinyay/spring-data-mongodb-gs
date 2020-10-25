@@ -19,7 +19,7 @@ class SpringDataMongodbGsApplication(val repository: CustomerRepository) : Comma
 		logger.info("[SAVE CUSTOMER]=================")
 		repository.save(Customer(null,"Alice", "Smith"))
 		repository.save(Customer(null,"Bob", "Smith"))
-		repository.save(Customer(null,"Carol", "Baker")))
+		repository.save(Customer(null,"Carol", "Baker"))
 		logger.info("================================")
 
 		logger.info("[FIND CUSTOMERS]================")
