@@ -19,7 +19,7 @@ class SpringDataMongodbGsApplication(val repository: CustomerRepository) : Comma
 		repository.save(Customer(null,"Carol", "Baker"))
 
 		for (customer in repository.findAll()) {
-			println(customer)
+			logger.info(customer.toString())
 		}
 
 		println(repository.findByFirstName("Alice"))
