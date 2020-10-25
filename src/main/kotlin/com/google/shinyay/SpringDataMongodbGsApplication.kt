@@ -2,6 +2,8 @@ package com.google.shinyay
 
 import com.google.shinyay.entity.Customer
 import com.google.shinyay.repository.CustomerRepository
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -31,3 +33,6 @@ class SpringDataMongodbGsApplication(val repository: CustomerRepository) : Comma
 fun main(args: Array<String>) {
 	runApplication<SpringDataMongodbGsApplication>(*args)
 }
+
+val Any.logger: Logger
+	get() = LoggerFactory.getLogger(this.javaClass)
