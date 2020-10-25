@@ -12,12 +12,13 @@ class SpringDataMongodbGsApplication(val repository: CustomerRepository) : Comma
 	override fun run(vararg args: String?) {
 		repository.deleteAll()
 
-		repository.save(Customer("Alice", "Smith"))
-		repository.save(Customer("Bob", "Smith"))
+		repository.save(Customer(null,"Alice", "Smith"))
+		repository.save(Customer(null,"Bob", "Smith"))
 
 		for (customer in repository.findAll()) {
 			println(customer)
 		}
+
 	}
 }
 
