@@ -22,10 +22,10 @@ class SpringDataMongodbGsApplication(val repository: CustomerRepository) : Comma
 			logger.info(customer.toString())
 		}
 
-		println(repository.findByFirstName("Alice"))
+		logger.info(repository.findByFirstName("Alice").toString())
 
 		for (customer in repository.findByLastName("Smith")) {
-			println(customer)
+			logger.info(customer.toString())
 		}
 	}
 }
