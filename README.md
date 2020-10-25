@@ -3,6 +3,22 @@
 Overview
 
 ## Description
+### Dependency
+- `spring-boot-starter-data-mongodb`
+
+```kotlin
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+}
+```
+
+### Configuration for MongoDB to connect from Spring App
+```yaml
+spring:
+  data:
+    mongodb:
+      uri: localhost:27017
+```
 
 ## Demo
 ### Run MongoDB Container
@@ -56,15 +72,6 @@ customer
 ```shell script
 > db.product.find( {QUERY} )
 ```
-
-### Configuration for MongoDB to connect from Spring App
-```yaml
-spring:
-  data:
-    mongodb:
-      uri: localhost:27017
-```
-
 
 ## Features
 
