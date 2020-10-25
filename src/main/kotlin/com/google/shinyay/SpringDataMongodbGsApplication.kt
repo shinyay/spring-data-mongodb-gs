@@ -19,6 +19,7 @@ class SpringDataMongodbGsApplication(val repository: CustomerRepository) : Comma
 			println(customer)
 		}
 
+		println(repository.findByFirstName("Alice"))
 	}
 }
 
