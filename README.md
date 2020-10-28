@@ -14,11 +14,20 @@ dependencies {
 ```
 
 ### Configuration for MongoDB to connect from Spring App
+You can configure connection definition in `application.yml`
+
+- host: `localhost`
+  - We use MongoDB in a container at localhost
+- port: `27017` (Default port)
+- database: database name
+
 ```yaml
 spring:
   data:
     mongodb:
-      uri: localhost:27017
+      host: localhost
+      port: 27017
+      database: spring
 ```
 
 ## Demo
