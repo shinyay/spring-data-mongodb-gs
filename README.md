@@ -1,6 +1,7 @@
 # Spring Data MongoDB Getting Started
 
-Overview
+MongoDB is document-based distributed Database.
+Spring Data MongoDB enables you to operate it from Spring Application.
 
 ## Description
 ### Dependency
